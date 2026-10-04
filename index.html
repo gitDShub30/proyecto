@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web - Dokploy</title>
+    <title>Portafolio Profesional / CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <span class="badge">Despliegue Exitoso</span>
-        <h1>¡Hola desde Dokploy & GitHub! 🚀</h1>
-        <p>Esta aplicación web ha sido desplegada de forma automatizada conectando un repositorio de GitHub directamente a Dokploy.</p>
+    <div class="cv-container">
+        <!-- Encabezado con Foto y Nombre -->
+        <header class="header">
+            <div class="avatar-box">
+                <!-- Puedes colocar tu foto guardándola como foto.jpg en la misma carpeta -->
+                <img src="foto.jpg" alt="Foto de Perfil" id="profile-photo" onerror="this.src='https://via.placeholder.com/150/1e293b/38bdf8?text=Mi+Foto'">
+            </div>
+            <h1>Tu Nombre Completo</h1>
+            <p class="subtitle">Estudiante de Ingeniería | Desarrollador</p>
+            <span class="badge">Práctica 5 - Despliegue Local</span>
+        </header>
 
-        <div class="status-container">
-            <div class="status-item">
-                <span>Proveedor</span>
-                <strong>GitHub</strong>
-            </div>
-            <div class="status-item">
-                <span>Servidor</span>
-                <strong>Dokploy / Nginx</strong>
-            </div>
-            <div class="status-item">
-                <span>Estado</span>
-                <strong id="status-text" style="color: #4ade80;">Online</strong>
-            </div>
-        </div>
+        <!-- Perfil Profesional -->
+        <section class="section">
+            <h2>Perfil Profesional</h2>
+            <p>Estudiante enfocado en el desarrollo de software, administración de bases de datos y sistemas basados en Linux. Experiencia en orquestación de contenedores con Docker, Git y despliegues en servidores PaaS.</p>
+        </section>
 
-        <button id="btn-verificar" class="btn">Verificar Estado</button>
+        <!-- Habilidades Técnicas -->
+        <section class="section">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Linux / Arch / Garuda</span>
+                <span class="skill-tag">Docker & Dokploy</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">HTML5 / CSS3 / JS</span>
+                <span class="skill-tag">Bases de Datos (SQL)</span>
+                <span class="skill-tag">Microcontroladores</span>
+            </div>
+        </section>
+
+        <!-- Proyectos Realizados -->
+        <section class="section">
+            <h2>Proyectos & Prácticas</h2>
+            <div class="project-card">
+                <h3>Servidor de Despliegue Local (Dokploy)</h3>
+                <p>Configuración de infraestructura PaaS sobre Docker Swarm para el despliegue automático de aplicaciones web conectadas a GitHub.</p>
+            </div>
+        </section>
+
+        <!-- Información del Servidor / IP Local -->
+        <section class="section server-info">
+            <h2>Estado del Servidor Local</h2>
+            <div class="status-box">
+                <p><strong>Acceso Local:</strong> <span id="ip-display">Cargando IP...</span></p>
+                <p><strong>Estado:</strong> <span style="color: #4ade80;">Servidor En Línea</span></p>
+            </div>
+            <button id="btn-contact" class="btn">Verificar Conexión</button>
+        </section>
     </div>
 
     <script src="script.js"></script>
