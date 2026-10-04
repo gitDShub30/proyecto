@@ -2,143 +2,261 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Arial Black', sans-serif;
 }
 
 body {
-    background: #0f172a;
-    color: #f8fafc;
+    background-color: #050505;
+    background-image: 
+        linear-gradient(rgba(255, 102, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 102, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #e5e5e5;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 30px 20px;
+    padding-bottom: 40px;
 }
 
-.cv-container {
-    background: rgba(30, 41, 59, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 680px;
+/* BARRA ALERTA TOP */
+.nerv-top-bar {
     width: 100%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    background: #ff0033;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
 }
 
+/* CONTENEDOR PRINCIPAL */
+.nerv-container {
+    max-width: 750px;
+    width: 90%;
+    margin-top: 30px;
+    border: 3px solid #ff6600;
+    background: rgba(10, 10, 12, 0.95);
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.25);
+    position: relative;
+}
+
+/* LOGO Y ENCABEZADO */
 .header {
-    text-align: center;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 25px;
+    border-bottom: 2px dashed #ff6600;
+    padding-bottom: 20px;
     margin-bottom: 25px;
 }
 
-.avatar-box {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 15px auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+.nerv-logo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-.avatar-box img {
+.logo-text {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ff6600;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.motto {
+    font-size: 0.65rem;
+    color: #ff9900;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+.profile-section {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.avatar-frame {
+    width: 140px;
+    height: 140px;
+    border: 3px solid #ff6600;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    flex-shrink: 0;
+}
+
+.avatar-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.header h1 {
-    font-size: 2rem;
-    color: #ffffff;
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff0033;
+    box-shadow: 0 0 10px #ff0033;
+    animation: scan 2.5s infinite linear;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    50% { top: 100%; }
+    100% { top: 0; }
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.code-badge {
+    background: #ff6600;
+    color: #000;
+    display: inline-block;
+    padding: 2px 8px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
     margin-bottom: 5px;
 }
 
-.subtitle {
-    color: #94a3b8;
-    font-size: 1rem;
-    margin-bottom: 12px;
-}
-
-.badge {
-    background: #0284c7;
+.pilot-name {
+    font-size: 2.2rem;
     color: #ffffff;
-    font-size: 0.75rem;
-    padding: 5px 14px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-.section {
-    margin-bottom: 25px;
-}
-
-.section h2 {
-    font-size: 1.25rem;
-    color: #38bdf8;
+.role-title {
+    color: #ffcc00;
+    font-size: 0.9rem;
     margin-bottom: 12px;
-    border-left: 3px solid #38bdf8;
-    padding-left: 10px;
 }
 
-.section p {
-    color: #cbd5e1;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    background: #1e293b;
-    border: 1px solid #334155;
-    color: #f1f5f9;
-    padding: 6px 14px;
-    border-radius: 8px;
+.sync-rate {
+    font-family: monospace;
+    color: #ff6600;
     font-size: 0.85rem;
 }
 
-.project-card {
-    background: #1e293b;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #334155;
+.sync-bar {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border: 1px solid #ff6600;
+    margin-top: 4px;
 }
 
-.project-card h3 {
+.sync-fill {
+    width: 99.8%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6600, #ff0033);
+}
+
+/* CAJAS NERV */
+.nerv-box {
+    border: 1px solid #ff6600;
+    background: rgba(20, 20, 25, 0.8);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.box-title {
+    background: #ff6600;
+    color: #000;
+    font-weight: 900;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.nerv-box p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* GRILLA HABILIDADES */
+.skills-hex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.hex-tag {
+    background: #000;
+    border: 1px solid #ff9900;
+    color: #ffcc00;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.hex-tag:hover {
+    background: #ff6600;
+    color: #000;
+}
+
+.project-item h3 {
+    color: #ffcc00;
     font-size: 1rem;
-    color: #f8fafc;
     margin-bottom: 5px;
 }
 
-.status-box {
-    background: #1e293b;
-    padding: 12px 18px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #334155;
+/* TELEMETRÍA / RED */
+.alert-box {
+    border-color: #ff0033;
 }
 
-.btn {
+.network-details p {
+    font-family: monospace;
+    margin-bottom: 6px;
+}
+
+.highlight-orange {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.status-active {
+    color: #00ff66;
+    font-weight: bold;
+}
+
+.nerv-btn {
     width: 100%;
-    background: linear-gradient(135deg, #0284c7, #06b6d4);
-    color: white;
+    background: #ff0033;
+    color: #fff;
     border: none;
     padding: 12px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
+    font-weight: 900;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: transform 0.2s;
+    margin-top: 10px;
+    transition: background 0.2s;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.nerv-btn:hover {
+    background: #ff6600;
+    color: #000;
+}
+
+.nerv-footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 15px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
 }

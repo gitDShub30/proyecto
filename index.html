@@ -3,60 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional / CV</title>
+    <title>NERV PERSONNEL FILE // EMANUEL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="cv-container">
-        <!-- Encabezado con Foto y Nombre -->
+    <!-- BARRA SUPERIOR DE ADVERTENCIA NERV -->
+    <div class="nerv-top-bar">
+        <span class="warning-text">EMERGENCY // TOP SECRET // NERV CENTRAL DOSSIER</span>
+        <span class="magi-status">MAGI-01: ONLINE</span>
+    </div>
+
+    <div class="nerv-container">
+        <!-- ENCABEZADO Y LOGO NERV -->
         <header class="header">
-            <div class="avatar-box">
-                <!-- Puedes colocar tu foto guardándola como foto.jpg en la misma carpeta -->
-                <img src="foto.jpg" alt="Foto de Perfil" id="profile-photo" onerror="this.src='https://via.placeholder.com/150/1e293b/38bdf8?text=Mi+Foto'">
+            <div class="nerv-logo">
+                <span class="logo-text">NERV</span>
+                <span class="motto">GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.</span>
             </div>
-            <h1>Tu Nombre Completo</h1>
-            <p class="subtitle">Estudiante de Ingeniería | Desarrollador</p>
-            <span class="badge">Práctica 5 - Despliegue Local</span>
+            
+            <div class="profile-section">
+                <div class="avatar-frame">
+                    <img src="foto.jpg" alt="Foto de Emanuel" id="profile-photo" onerror="this.src='https://via.placeholder.com/160/ff6600/000000?text=PILOT+PHOTO'">
+                    <div class="scan-line"></div>
+                </div>
+
+                <div class="profile-info">
+                    <div class="code-badge">SUBJECT CODE: EMA-2026-P5</div>
+                    <h1 class="pilot-name">EMANUEL</h1>
+                    <p class="role-title">CHIEF SYSTEMS ENGINEER & DEVELOPER</p>
+                    <div class="sync-rate">
+                        <span>SYNC RATE: </span>
+                        <strong id="sync-val">99.8%</strong>
+                        <div class="sync-bar"><div class="sync-fill"></div></div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <!-- Perfil Profesional -->
-        <section class="section">
-            <h2>Perfil Profesional</h2>
-            <p>Estudiante enfocado en el desarrollo de software, administración de bases de datos y sistemas basados en Linux. Experiencia en orquestación de contenedores con Docker, Git y despliegues en servidores PaaS.</p>
+        <!-- EXPEDIENTE Y PERFIL -->
+        <section class="nerv-box">
+            <div class="box-title">FILE // 01: PERFIL PROFESIONAL & ACADÉMICO</div>
+            <p>Estudiante de Ingeniería especializado en arquitectura de sistemas Linux (Garuda / Arch Linux), orquestación de contenedores en Docker Swarm, despliegue de infraestructuras PaaS (Dokploy) y administración de bases de datos relacionales (MariaDB / Microsoft SQL Server). Enfocado en desarrollo de software y controladores embebidos.</p>
         </section>
 
-        <!-- Habilidades Técnicas -->
-        <section class="section">
-            <h2>Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Linux / Arch / Garuda</span>
-                <span class="skill-tag">Docker & Dokploy</span>
-                <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">HTML5 / CSS3 / JS</span>
-                <span class="skill-tag">Bases de Datos (SQL)</span>
-                <span class="skill-tag">Microcontroladores</span>
+        <!-- MATRIZ DE HABILIDADES -->
+        <section class="nerv-box">
+            <div class="box-title">FILE // 02: HARDWARE & SOFTWARE MATRIX</div>
+            <div class="skills-hex-grid">
+                <div class="hex-tag">GARUDA / ARCH LINUX</div>
+                <div class="hex-tag">DOCKER & DOKPLOY</div>
+                <div class="hex-tag">GIT & GITHUB</div>
+                <div class="hex-tag">HTML5 / CSS3 / JS</div>
+                <div class="hex-tag">MARIADB / SQL SERVER</div>
+                <div class="hex-tag">PIC / SIMULIDE</div>
             </div>
         </section>
 
-        <!-- Proyectos Realizados -->
-        <section class="section">
-            <h2>Proyectos & Prácticas</h2>
-            <div class="project-card">
-                <h3>Servidor de Despliegue Local (Dokploy)</h3>
-                <p>Configuración de infraestructura PaaS sobre Docker Swarm para el despliegue automático de aplicaciones web conectadas a GitHub.</p>
+        <!-- PROYECTOS -->
+        <section class="nerv-box">
+            <div class="box-title">FILE // 03: SYSTEM OPERATIONS & PROJECTS</div>
+            <div class="project-item">
+                <h3>DESPLIEGUE DOKPLOY + DOCKER SWARM (PRÁCTICA 5)</h3>
+                <p>Implementación de plataforma PaaS local en entorno Garuda Linux con integración continua a GitHub, asignación de IP de red local y enrutamiento dinámico en puerto 80.</p>
             </div>
         </section>
 
-        <!-- Información del Servidor / IP Local -->
-        <section class="section server-info">
-            <h2>Estado del Servidor Local</h2>
-            <div class="status-box">
-                <p><strong>Acceso Local:</strong> <span id="ip-display">Cargando IP...</span></p>
-                <p><strong>Estado:</strong> <span style="color: #4ade80;">Servidor En Línea</span></p>
+        <!-- TELEMETRÍA DE RED Y SERVIDOR -->
+        <section class="nerv-box alert-box">
+            <div class="box-title">NETWORK TELEMETRY // SERVER NODE</div>
+            <div class="network-details">
+                <p><strong>HOST IP:</strong> <span id="ip-display" class="highlight-orange">CARGANDO IP...</span></p>
+                <p><strong>SECURITY STATUS:</strong> <span class="status-active">NORMAL // LOCAL HOST ACTIVE</span></p>
+                <p><strong>PORT ENTRANCE:</strong> <span>PORT 80 [HTTP]</span></p>
             </div>
-            <button id="btn-contact" class="btn">Verificar Conexión</button>
+            <button id="btn-sync" class="nerv-btn">INICIAR PRUEBA DE CONEXIÓN NERV</button>
         </section>
+
+        <footer class="nerv-footer">
+            <span>NERV HEADQUARTERS // DOKPLOY PRACTICA 5 // CINTALAPA CHIAPAS</span>
+        </footer>
     </div>
 
     <script src="script.js"></script>

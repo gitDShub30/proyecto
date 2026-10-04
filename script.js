@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ipDisplay = document.getElementById('ip-display');
+    const syncVal = document.getElementById('sync-val');
     
-    // Muestra el host/IP desde donde se accede a la página
+    // Muestra la IP o Host actual del navegador
     ipDisplay.innerText = window.location.hostname + ':' + (window.location.port || '80');
 
-    document.getElementById('btn-contact').addEventListener('click', function() {
-        alert('Conexión correcta al servidor CV desplegado en la IP Local: ' + window.location.hostname);
+    // Efecto de fluctuación ligera del Sync Rate estilo NERV
+    setInterval(() => {
+        const rate = (99.2 + Math.random() * 0.7).toFixed(1);
+        syncVal.innerText = rate + '%';
+    }, 3000);
+
+    // Botón de verificación
+    document.getElementById('btn-sync').addEventListener('click', function() {
+        alert('NERV MAGI SYSTEM: Conexión verificada exitosamente en ' + window.location.hostname);
     });
 });
