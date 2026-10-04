@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web - Dokploy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <span class="badge">Despliegue Exitoso</span>
+        <h1>¡Hola desde Dokploy & GitHub! 🚀</h1>
+        <p>Esta aplicación web ha sido desplegada de forma automatizada conectando un repositorio de GitHub directamente a Dokploy.</p>
+
+        <div class="status-container">
+            <div class="status-item">
+                <span>Proveedor</span>
+                <strong>GitHub</strong>
+            </div>
+            <div class="status-item">
+                <span>Servidor</span>
+                <strong>Dokploy / Nginx</strong>
+            </div>
+            <div class="status-item">
+                <span>Estado</span>
+                <strong id="status-text" style="color: #4ade80;">Online</strong>
+            </div>
+        </div>
+
+        <button id="btn-verificar" class="btn">Verificar Estado</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
