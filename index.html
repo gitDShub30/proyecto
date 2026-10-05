@@ -1,90 +1,416 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NERV PERSONNEL FILE // EMANUEL</title>
+
+    <meta name="description" content="Portafolio personal de Emanuel - Desarrollo de software, Linux, Docker y bases de datos.">
+
+    <title>NERV // PERSONNEL FILE // EMANUEL</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- BARRA SUPERIOR DE ADVERTENCIA NERV -->
+    <!-- BARRA SUPERIOR -->
     <div class="nerv-top-bar">
-        <span class="warning-text">EMERGENCY // TOP SECRET // NERV CENTRAL DOSSIER</span>
-        <span class="magi-status">MAGI-01: ONLINE</span>
+        <span class="warning-text">
+            ⚠ EMERGENCY // TOP SECRET // NERV CENTRAL DOSSIER
+        </span>
+
+        <span class="magi-status">
+            MAGI-01: <b>ONLINE</b>
+        </span>
     </div>
 
-    <div class="nerv-container">
-        <!-- ENCABEZADO Y LOGO NERV -->
+
+    <main class="nerv-container">
+
+        <!-- HEADER -->
         <header class="header">
-            <div class="nerv-logo">
-                <span class="logo-text">NERV</span>
-                <span class="motto">GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.</span>
-            </div>
-            
-            <div class="profile-section">
-                <div class="avatar-frame">
-                    <img src="Gemini_Generated_Image_6woe3z6woe3z6woe.jpg" alt="Foto de Emanuel" id="profile-photo" onerror="this.src='https://via.placeholder.com/160/ff6600/000000?text=PILOT+PHOTO'">
-                    <div class="scan-line"></div>
+
+            <div class="header-top">
+
+                <div class="nerv-logo">
+                    <span class="logo-text">NERV</span>
+
+                    <span class="motto">
+                        GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.
+                    </span>
                 </div>
+
+                <div class="file-status">
+                    PERSONNEL FILE<br>
+                    <span>STATUS: ACTIVE</span>
+                </div>
+
+            </div>
+
+
+            <!-- PERFIL -->
+            <div class="profile-section">
+
+                <div class="avatar-frame">
+
+                    <img
+                        src="david.png"
+                        alt="Foto de Emanuel"
+                        id="profile-photo"
+                    >
+
+                    <div class="scan-line"></div>
+
+                    <div class="photo-label">
+                        PILOT // EMA-01
+                    </div>
+
+                </div>
+
 
                 <div class="profile-info">
-                    <div class="code-badge">SUBJECT CODE: EMA-2026-P5</div>
-                    <h1 class="pilot-name">EMANUEL</h1>
-                    <p class="role-title">CHIEF SYSTEMS ENGINEER & DEVELOPER</p>
-                    <div class="sync-rate">
-                        <span>SYNC RATE: </span>
-                        <strong id="sync-val">99.8%</strong>
-                        <div class="sync-bar"><div class="sync-fill"></div></div>
+
+                    <div class="code-badge">
+                        SUBJECT CODE: EMA-2026-P5
                     </div>
+
+                    <h1 class="pilot-name">
+                        EMANUEL
+                    </h1>
+
+                    <p class="role-title">
+                        ESTUDIANTE DE INGENIERÍA // DESARROLLADOR
+                    </p>
+
+                    <p class="short-description">
+                        Desarrollo de software, administración de sistemas,
+                        Linux, Docker y bases de datos.
+                    </p>
+
+
+                    <div class="sync-rate">
+
+                        <span>SYNC RATE:</span>
+
+                        <strong id="sync-val">
+                            99.8%
+                        </strong>
+
+                        <div class="sync-bar">
+                            <div class="sync-fill"></div>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </header>
 
-        <!-- EXPEDIENTE Y PERFIL -->
+
+        <!-- SOBRE MI -->
         <section class="nerv-box">
-            <div class="box-title">FILE // 01: PERFIL PROFESIONAL & ACADÉMICO</div>
-            <p>Estudiante de Ingeniería especializado en arquitectura de sistemas Linux (Garuda / Arch Linux), orquestación de contenedores en Docker Swarm, despliegue de infraestructuras PaaS (Dokploy) y administración de bases de datos relacionales (MariaDB / Microsoft SQL Server). Enfocado en desarrollo de software y controladores embebidos.</p>
+
+            <div class="box-title">
+                FILE // 01: ABOUT PERSONNEL
+            </div>
+
+            <div class="about-content">
+
+                <div class="section-icon">
+                    01
+                </div>
+
+                <div>
+                    <h2>PERFIL</h2>
+
+                    <p>
+                        Soy estudiante de Ingeniería interesado en el
+                        desarrollo de software, administración de sistemas
+                        y tecnologías relacionadas con servidores.
+                    </p>
+
+                    <p>
+                        Actualmente trabajo con entornos Linux, Docker,
+                        Git, bases de datos y desarrollo web. Me interesa
+                        aprender mediante proyectos prácticos y llevar
+                        aplicaciones desde su desarrollo hasta su despliegue.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- MATRIZ DE HABILIDADES -->
+
+        <!-- HABILIDADES -->
         <section class="nerv-box">
-            <div class="box-title">FILE // 02: HARDWARE & SOFTWARE MATRIX</div>
-            <div class="skills-hex-grid">
-                <div class="hex-tag">GARUDA / ARCH LINUX</div>
-                <div class="hex-tag">DOCKER & DOKPLOY</div>
-                <div class="hex-tag">GIT & GITHUB</div>
-                <div class="hex-tag">HTML5 / CSS3 / JS</div>
-                <div class="hex-tag">MARIADB / SQL SERVER</div>
-                <div class="hex-tag">PIC / SIMULIDE</div>
+
+            <div class="box-title">
+                FILE // 02: SYSTEM SKILLS
             </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <span class="skill-number">01</span>
+                    <h3>LINUX</h3>
+                    <p>Garuda / Arch Linux</p>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">02</span>
+                    <h3>DOCKER</h3>
+                    <p>Contenedores y despliegues</p>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">03</span>
+                    <h3>DOKPLOY</h3>
+                    <p>Administración y PaaS</p>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">04</span>
+                    <h3>GIT</h3>
+                    <p>GitHub y control de versiones</p>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">05</span>
+                    <h3>DATABASE</h3>
+                    <p>MariaDB / SQL Server</p>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">06</span>
+                    <h3>WEB</h3>
+                    <p>HTML / CSS / JavaScript</p>
+                </div>
+
+            </div>
+
         </section>
+
+
+        <!-- TECNOLOGIAS -->
+        <section class="nerv-box">
+
+            <div class="box-title">
+                FILE // 03: TECHNOLOGY MATRIX
+            </div>
+
+            <div class="tech-list">
+
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Docker</span>
+                <span>Dokploy</span>
+                <span>Linux</span>
+                <span>MariaDB</span>
+                <span>SQL Server</span>
+                <span>PIC</span>
+                <span>SimulIDE</span>
+
+            </div>
+
+        </section>
+
 
         <!-- PROYECTOS -->
         <section class="nerv-box">
-            <div class="box-title">FILE // 03: SYSTEM OPERATIONS & PROJECTS</div>
-            <div class="project-item">
-                <h3>DESPLIEGUE DOKPLOY + DOCKER SWARM (PRÁCTICA 5)</h3>
-                <p>Implementación de plataforma PaaS local en entorno Garuda Linux con integración continua a GitHub, asignación de IP de red local y enrutamiento dinámico en puerto 80.</p>
+
+            <div class="box-title">
+                FILE // 04: SYSTEM OPERATIONS
             </div>
+
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <span class="project-id">
+                        PROJECT // 001
+                    </span>
+
+                    <span class="project-status">
+                        ● OPERATIONAL
+                    </span>
+
+                </div>
+
+                <h2>
+                    DOKPLOY + DOCKER DEPLOYMENT
+                </h2>
+
+                <p>
+                    Implementación de una aplicación web utilizando
+                    GitHub como repositorio y Dokploy para realizar
+                    el despliegue de la aplicación mediante Docker.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>LINUX</span>
+                    <span>DOCKER</span>
+                    <span>DOKPLOY</span>
+                    <span>GITHUB</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-header">
+
+                    <span class="project-id">
+                        PROJECT // 002
+                    </span>
+
+                    <span class="project-status">
+                        ● IN DEVELOPMENT
+                    </span>
+
+                </div>
+
+                <h2>
+                    EMBEDDED SYSTEMS
+                </h2>
+
+                <p>
+                    Prácticas relacionadas con microcontroladores,
+                    simulación de circuitos y programación de
+                    sistemas embebidos utilizando herramientas como
+                    PIC y SimulIDE.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>PIC</span>
+                    <span>SIMULIDE</span>
+                    <span>ELECTRONICS</span>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- TELEMETRÍA DE RED Y SERVIDOR -->
+
+        <!-- TELEMETRIA -->
         <section class="nerv-box alert-box">
-            <div class="box-title">NETWORK TELEMETRY // SERVER NODE</div>
-            <div class="network-details">
-                <p><strong>HOST IP:</strong> <span id="ip-display" class="highlight-orange">CARGANDO IP...</span></p>
-                <p><strong>SECURITY STATUS:</strong> <span class="status-active">NORMAL // LOCAL HOST ACTIVE</span></p>
-                <p><strong>PORT ENTRANCE:</strong> <span>PORT 80 [HTTP]</span></p>
+
+            <div class="box-title red-title">
+                NETWORK TELEMETRY // SERVER NODE
             </div>
-            <button id="btn-sync" class="nerv-btn">INICIAR PRUEBA DE CONEXIÓN NERV</button>
+
+            <div class="network-grid">
+
+                <div class="network-item">
+                    <span>HOST</span>
+                    <strong id="host-display">
+                        CARGANDO...
+                    </strong>
+                </div>
+
+                <div class="network-item">
+                    <span>PORT</span>
+                    <strong>
+                        80 // HTTP
+                    </strong>
+                </div>
+
+                <div class="network-item">
+                    <span>STATUS</span>
+                    <strong class="status-active">
+                        ● ONLINE
+                    </strong>
+                </div>
+
+                <div class="network-item">
+                    <span>SECURITY</span>
+                    <strong>
+                        NORMAL
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <button id="btn-sync" class="nerv-btn">
+                INICIAR PRUEBA DE CONEXIÓN NERV
+            </button>
+
         </section>
 
+
+        <!-- CONTACTO -->
+        <section class="nerv-box contact-box">
+
+            <div class="box-title">
+                FILE // 05: COMMUNICATION CHANNELS
+            </div>
+
+            <p class="contact-text">
+                Para conocer más sobre mis proyectos y prácticas,
+                puedes consultar mi repositorio.
+            </p>
+
+            <div class="contact-links">
+
+                <!-- Cambia el enlace por tu GitHub -->
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="contact-btn"
+                >
+                    GITHUB
+                </a>
+
+                <a
+                    href="mailto:tu-correo@example.com"
+                    class="contact-btn"
+                >
+                    EMAIL
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
         <footer class="nerv-footer">
-            <span>NERV HEADQUARTERS // DOKPLOY PRACTICA 5 // CINTALAPA CHIAPAS</span>
+
+            <div>
+                NERV HEADQUARTERS // PERSONNEL DATABASE
+            </div>
+
+            <div>
+                DOKPLOY PRACTICA 5 // CINTALAPA, CHIAPAS
+            </div>
+
+            <div class="footer-code">
+                SYSTEM ID: EMA-2026 // ALL SYSTEMS OPERATIONAL
+            </div>
+
         </footer>
-    </div>
+
+    </main>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
+```

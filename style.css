@@ -1,262 +1,897 @@
+```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Arial Black', sans-serif;
+}
+
+:root {
+    --orange: #ff6600;
+    --orange-light: #ff9900;
+    --yellow: #ffcc00;
+    --red: #ff0033;
+    --green: #00ff66;
+    --black: #050505;
+    --panel: rgba(15, 15, 18, 0.94);
+    --text: #e5e5e5;
+    --muted: #999;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #050505;
-    background-image: 
-        linear-gradient(rgba(255, 102, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 102, 0, 0.05) 1px, transparent 1px);
+    background-color: var(--black);
+
+    background-image:
+        linear-gradient(rgba(255, 102, 0, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 102, 0, 0.045) 1px, transparent 1px);
+
     background-size: 20px 20px;
-    color: #e5e5e5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    color: var(--text);
+
+    font-family:
+        'Trebuchet MS',
+        Arial,
+        sans-serif;
+
     min-height: 100vh;
-    padding-bottom: 40px;
 }
 
-/* BARRA ALERTA TOP */
+
+/* =========================================
+   TOP BAR
+========================================= */
+
 .nerv-top-bar {
     width: 100%;
-    background: #ff0033;
-    color: #000;
+
     display: flex;
     justify-content: space-between;
-    padding: 6px 20px;
+    align-items: center;
+
+    padding: 7px 20px;
+
+    background: var(--red);
+    color: #000;
+
+    font-family: monospace;
+    font-size: 0.78rem;
     font-weight: 900;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
+
+    letter-spacing: 1.5px;
+
+    border-bottom: 2px solid #ff3355;
 }
 
-/* CONTENEDOR PRINCIPAL */
+.magi-status {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
 .nerv-container {
-    max-width: 750px;
-    width: 90%;
-    margin-top: 30px;
-    border: 3px solid #ff6600;
-    background: rgba(10, 10, 12, 0.95);
+    width: min(920px, 92%);
+
+    margin: 35px auto;
+
     padding: 30px;
-    box-shadow: 0 0 25px rgba(255, 102, 0, 0.25);
+
+    border: 2px solid var(--orange);
+
+    background:
+        linear-gradient(
+            rgba(255, 102, 0, 0.025),
+            rgba(0, 0, 0, 0.15)
+        ),
+        var(--panel);
+
+    box-shadow:
+        0 0 30px rgba(255, 102, 0, 0.18),
+        inset 0 0 25px rgba(255, 102, 0, 0.025);
+
     position: relative;
 }
 
-/* LOGO Y ENCABEZADO */
+
+/* =========================================
+   HEADER
+========================================= */
+
 .header {
-    border-bottom: 2px dashed #ff6600;
-    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--orange);
+
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
     margin-bottom: 25px;
 }
 
 .nerv-logo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
 }
 
 .logo-text {
-    font-size: 2.8rem;
+    color: var(--orange);
+
+    font-size: 4rem;
     font-weight: 900;
-    color: #ff6600;
-    line-height: 1;
-    letter-spacing: 4px;
+
+    line-height: 0.8;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 10px rgba(255, 102, 0, 0.4);
 }
 
 .motto {
-    font-size: 0.65rem;
-    color: #ff9900;
-    letter-spacing: 1px;
+    color: var(--orange-light);
+
     font-family: monospace;
+    font-size: 0.62rem;
+
+    letter-spacing: 1px;
+
+    margin-top: 7px;
 }
+
+.file-status {
+    text-align: right;
+
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 0.7rem;
+
+    line-height: 1.6;
+}
+
+.file-status span {
+    color: var(--green);
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
 
 .profile-section {
     display: flex;
-    gap: 25px;
+
+    gap: 28px;
+
     align-items: center;
 }
 
 .avatar-frame {
-    width: 140px;
-    height: 140px;
-    border: 3px solid #ff6600;
-    position: relative;
-    overflow: hidden;
-    background: #000;
+    width: 170px;
+    height: 170px;
+
     flex-shrink: 0;
+
+    border: 3px solid var(--orange);
+
+    background: #000;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(255, 102, 0, 0.2);
 }
 
 .avatar-frame img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
+    display: block;
 }
 
 .scan-line {
     position: absolute;
-    top: 0;
+
     left: 0;
+
+    top: 0;
+
     width: 100%;
-    height: 4px;
-    background: #ff0033;
-    box-shadow: 0 0 10px #ff0033;
+    height: 3px;
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 10px var(--red),
+        0 0 20px var(--red);
+
     animation: scan 2.5s infinite linear;
 }
 
 @keyframes scan {
-    0% { top: 0; }
-    50% { top: 100%; }
-    100% { top: 0; }
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: calc(100% - 3px);
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.photo-label {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 4px;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    color: var(--orange);
+
+    text-align: center;
+
+    font-family: monospace;
+    font-size: 0.65rem;
+
+    letter-spacing: 1px;
 }
 
 .profile-info {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .code-badge {
-    background: #ff6600;
-    color: #000;
     display: inline-block;
-    padding: 2px 8px;
+
+    padding: 4px 9px;
+
+    background: var(--orange);
+
+    color: #000;
+
+    font-family: monospace;
+
+    font-size: 0.72rem;
+
     font-weight: bold;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+
+    margin-bottom: 8px;
 }
 
 .pilot-name {
-    font-size: 2.2rem;
-    color: #ffffff;
-    letter-spacing: 2px;
+    color: #fff;
+
+    font-size: 2.8rem;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
 }
 
 .role-title {
-    color: #ffcc00;
+    color: var(--yellow);
+
+    font-family: monospace;
+
+    font-size: 0.85rem;
+
+    margin-top: 8px;
+}
+
+.short-description {
+    color: #aaa;
+
+    max-width: 600px;
+
     font-size: 0.9rem;
-    margin-bottom: 12px;
+
+    line-height: 1.5;
+
+    margin: 10px 0 15px;
 }
 
 .sync-rate {
+    color: var(--orange);
+
     font-family: monospace;
-    color: #ff6600;
-    font-size: 0.85rem;
+
+    font-size: 0.8rem;
 }
 
 .sync-bar {
     width: 100%;
-    height: 10px;
-    background: #222;
-    border: 1px solid #ff6600;
-    margin-top: 4px;
+    height: 9px;
+
+    margin-top: 5px;
+
+    background: #1d1d1d;
+
+    border: 1px solid var(--orange);
 }
 
 .sync-fill {
     width: 99.8%;
     height: 100%;
-    background: linear-gradient(90deg, #ff6600, #ff0033);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--orange),
+            var(--red)
+        );
+
+    transition: width 0.3s ease;
 }
 
-/* CAJAS NERV */
+
+/* =========================================
+   BOXES
+========================================= */
+
 .nerv-box {
-    border: 1px solid #ff6600;
-    background: rgba(20, 20, 25, 0.8);
-    padding: 15px;
+    padding: 18px;
+
     margin-bottom: 20px;
+
+    border: 1px solid var(--orange);
+
+    background: rgba(20, 20, 23, 0.82);
+
+    box-shadow:
+        inset 0 0 15px rgba(255, 102, 0, 0.025);
 }
 
 .box-title {
-    background: #ff6600;
-    color: #000;
-    font-weight: 900;
-    padding: 3px 10px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
     display: inline-block;
+
+    padding: 4px 10px;
+
+    margin-bottom: 16px;
+
+    background: var(--orange);
+
+    color: #000;
+
+    font-family: monospace;
+
+    font-size: 0.75rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
 }
 
 .nerv-box p {
-    color: #cccccc;
+    color: #c8c8c8;
+
     font-size: 0.9rem;
-    line-height: 1.5;
+
+    line-height: 1.65;
 }
 
-/* GRILLA HABILIDADES */
-.skills-hex-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-content {
+    display: flex;
+
+    gap: 18px;
 }
 
-.hex-tag {
-    background: #000;
-    border: 1px solid #ff9900;
-    color: #ffcc00;
-    padding: 8px 12px;
-    font-size: 0.8rem;
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--orange);
+
+    color: var(--orange);
+
     font-family: monospace;
-    text-align: center;
+    font-weight: bold;
+}
+
+.about-content h2 {
+    color: var(--yellow);
+
+    font-size: 1.1rem;
+
+    margin-bottom: 8px;
+
     letter-spacing: 1px;
 }
 
-.hex-tag:hover {
-    background: #ff6600;
-    color: #000;
+.about-content p + p {
+    margin-top: 8px;
 }
 
-.project-item h3 {
-    color: #ffcc00;
-    font-size: 1rem;
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.skill-card {
+    position: relative;
+
+    min-height: 105px;
+
+    padding: 15px;
+
+    border: 1px solid #555;
+
+    background: #080808;
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s,
+        background 0.2s;
+}
+
+.skill-card:hover {
+    border-color: var(--orange);
+
+    background:
+        rgba(255, 102, 0, 0.06);
+
+    transform: translateY(-3px);
+}
+
+.skill-number {
+    color: var(--orange);
+
+    font-family: monospace;
+
+    font-size: 0.65rem;
+}
+
+.skill-card h3 {
+    color: #fff;
+
+    font-size: 0.95rem;
+
+    margin: 8px 0 5px;
+
+    letter-spacing: 1px;
+}
+
+.skill-card p {
+    color: #888;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.tech-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.tech-list span,
+.project-tech span {
+    padding: 6px 10px;
+
+    border: 1px solid var(--orange-light);
+
+    color: var(--orange-light);
+
+    background: #050505;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.5px;
+}
+
+.tech-list span:hover,
+.project-tech span:hover {
+    color: #000;
+
+    background: var(--orange);
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.project-card {
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    border-left: 3px solid var(--orange);
+
+    background: #080808;
+
+    transition: 0.2s;
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-card:hover {
+    background: #101010;
+
+    border-left-color: var(--red);
+}
+
+.project-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    font-family: monospace;
+
+    font-size: 0.68rem;
+}
+
+.project-id {
+    color: var(--orange);
+}
+
+.project-status {
+    color: var(--green);
+}
+
+.project-card h2 {
+    color: var(--yellow);
+
+    font-size: 1.05rem;
+
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    margin-bottom: 14px;
+}
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+/* =========================================
+   NETWORK
+========================================= */
+
+.alert-box {
+    border-color: var(--red);
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 0, 51, 0.025);
+}
+
+.red-title {
+    background: var(--red);
+    color: #fff;
+}
+
+.network-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.network-item {
+    padding: 12px;
+
+    background: #050505;
+
+    border: 1px solid #333;
+}
+
+.network-item span {
+    display: block;
+
+    color: #666;
+
+    font-family: monospace;
+
+    font-size: 0.65rem;
+
     margin-bottom: 5px;
 }
 
-/* TELEMETRÍA / RED */
-.alert-box {
-    border-color: #ff0033;
-}
+.network-item strong {
+    color: var(--orange);
 
-.network-details p {
     font-family: monospace;
-    margin-bottom: 6px;
-}
 
-.highlight-orange {
-    color: #ff6600;
-    font-weight: bold;
+    font-size: 0.8rem;
 }
 
 .status-active {
-    color: #00ff66;
-    font-weight: bold;
+    color: var(--green) !important;
 }
+
+
+/* =========================================
+   BUTTON
+========================================= */
 
 .nerv-btn {
     width: 100%;
-    background: #ff0033;
+
+    padding: 13px;
+
+    border: 1px solid var(--red);
+
+    background: var(--red);
+
     color: #fff;
-    border: none;
-    padding: 12px;
-    font-weight: 900;
-    font-size: 0.95rem;
-    letter-spacing: 2px;
+
     cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
+
+    font-family: monospace;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.2s;
 }
 
 .nerv-btn:hover {
-    background: #ff6600;
+    background: var(--orange);
+
+    border-color: var(--orange);
+
     color: #000;
 }
 
-.nerv-footer {
-    text-align: center;
-    font-family: monospace;
-    font-size: 0.7rem;
-    color: #666;
-    margin-top: 15px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
+.nerv-btn:active {
+    transform: scale(0.99);
 }
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-text {
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 10px;
+}
+
+.contact-btn {
+    flex: 1;
+
+    padding: 11px;
+
+    border: 1px solid var(--orange);
+
+    color: var(--orange);
+
+    background: #050505;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-family: monospace;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.contact-btn:hover {
+    background: var(--orange);
+
+    color: #000;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.nerv-footer {
+    padding-top: 15px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 0.65rem;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+.footer-code {
+    color: #333;
+}
+
+
+/* =========================================
+   RESPONSIVE / CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .nerv-top-bar {
+        font-size: 0.58rem;
+
+        padding: 6px 10px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .nerv-container {
+        width: 94%;
+
+        padding: 17px;
+
+        margin-top: 20px;
+    }
+
+    .header-top {
+        align-items: flex-start;
+    }
+
+    .logo-text {
+        font-size: 3rem;
+    }
+
+    .motto {
+        font-size: 0.48rem;
+    }
+
+    .file-status {
+        font-size: 0.55rem;
+    }
+
+    .profile-section {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .avatar-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    .pilot-name {
+        font-size: 2.2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .network-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        gap: 10px;
+    }
+
+    .section-icon {
+        display: none;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .nerv-container {
+        padding: 12px;
+    }
+
+    .nerv-box {
+        padding: 13px;
+    }
+
+    .header-top {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .file-status {
+        text-align: left;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .logo-text {
+        font-size: 2.6rem;
+    }
+}
+```
